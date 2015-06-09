@@ -59,8 +59,10 @@ public class AnimatedPathView extends View {
 
     public AnimatedPathView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+
         mStrokePaint.setStyle(Paint.Style.STROKE);
         mFillPaint.setStyle(Paint.Style.FILL);
+
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.AnimatedPathView, defStyle, 0);
         try {
             if (a != null) {
