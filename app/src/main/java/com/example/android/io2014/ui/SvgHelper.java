@@ -103,12 +103,10 @@ public class SvgHelper {
 
         RectF viewBox = mSvg.getDocumentViewBox();
         float scale = Math.min(width / viewBox.width(), height / viewBox.height());
-
         canvas.translate(
                 (width - viewBox.width() * scale) / 2.0f,
                 (height - viewBox.height() * scale) / 2.0f);
         canvas.scale(scale, scale);
-
         mSvg.renderToCanvas(canvas);
 
         return mPaths;
